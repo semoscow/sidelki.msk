@@ -47,7 +47,22 @@ const steps = [
 export default function Home() {
   const [reviewIdx, setReviewIdx] = useState(0)
   const [visible, setVisible] = useState<Set<string>>(new Set())
+  const [videoPosition, setVideoPosition] = useState('55% center')
   const observerRef = useRef<IntersectionObserver | null>(null)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setVideoPosition('55% 60%')
+      } else {
+        setVideoPosition('55% center')
+      }
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver((entries) => {
@@ -80,7 +95,7 @@ export default function Home() {
             loop
             playsInline
             className="w-full h-full object-cover"
-            style={{ objectPosition: '55% center' }}
+            style={{ objectPosition: videoPosition }}
           >
             <source src="/hero-home.mp4" type="video/mp4" />
             <source src="/hero-home.webm" type="video/webm" />
