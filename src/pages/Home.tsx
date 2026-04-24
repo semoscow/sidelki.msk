@@ -53,7 +53,7 @@ export default function Home() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setVideoPosition('70% 80%')
+        setVideoPosition('70% 95%')
       } else {
         setVideoPosition('55% center')
       }
