@@ -74,11 +74,21 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <section className="relative min-h-[600px] lg:min-h-[85vh] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src="/hero-home.jpg"
-            alt="Сиделка заботится о пожилой женщине"
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
             className="w-full h-full object-cover"
-          />
+          >
+            <source src="/hero-home.mp4" type="video/mp4" />
+            <source src="/hero-home.webm" type="video/webm" />
+            <img
+              src="/hero-home.jpg"
+              alt="Сиделка заботится о пожилой женщиной"
+              className="w-full h-full object-cover"
+            />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A2F]/70 via-[#1B3A2F]/50 to-[#1B3A2F]/20" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
