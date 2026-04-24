@@ -79,7 +79,8 @@ export default function Home() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover sm:object-center"
+            style={{ objectPosition: 'left center' }}
           >
             <source src="/hero-home.mp4" type="video/mp4" />
             <source src="/hero-home.webm" type="video/webm" />
