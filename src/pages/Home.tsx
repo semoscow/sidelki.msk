@@ -79,7 +79,7 @@ export default function Home() {
             muted
             loop
             playsInline
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full md:object-cover object-contain"
           >
             <source src="/hero-home.mp4" type="video/mp4" />
             <source src="/hero-home.webm" type="video/webm" />
