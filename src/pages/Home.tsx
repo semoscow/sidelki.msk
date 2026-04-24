@@ -80,7 +80,7 @@ export default function Home() {
             loop
             playsInline
             className="w-full h-full object-cover"
-            style={{ objectPosition: '40% center' }}
+            style={{ objectPosition: '60% center' }}
           >
             <source src="/hero-home.mp4" type="video/mp4" />
             <source src="/hero-home.webm" type="video/webm" />
